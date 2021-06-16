@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class Statuse {
+class RequestModel {
   int native;
   List<String> allow;
 
-  Statuse({this.native, this.allow});
+  RequestModel({this.native, this.allow});
 
-  Statuse.fromJson(Map<String, dynamic> json) {
+  RequestModel.fromJson(Map<String, dynamic> json) {
     native = json['Native'];
     allow = json['Allow'].cast<String>();
   }
